@@ -1,6 +1,4 @@
 (function init() {
-    if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
-
     var $ = go.GraphObject.make;  // for conciseness in defining templates
 
     myDiagram = $(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
@@ -29,13 +27,14 @@
       { key: "Alpha", color: "lightblue" },
       { key: "Beta", color: "orange" },
       { key: "Gamma", color: "lightgreen" },
-      { key: "Delta", color: "pink" }
+      { key: "Delta", color: "yellow" }
     ],
     [
       { from: "Alpha", to: "Beta" },
       { from: "Alpha", to: "Gamma" },
       { from: "Beta", to: "Beta" },
       { from: "Gamma", to: "Delta" },
-      { from: "Delta", to: "Alpha" }
+      { from: "Delta", to: "Alpha" },
+      { from: "Delta", to: "Delta"}
     ]);
   })();

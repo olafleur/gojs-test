@@ -1,2 +1,3 @@
 script.js
 *.map
+node_modules/

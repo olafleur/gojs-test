@@ -1,7 +1,7 @@
-(function init() {
-    var $ = go.GraphObject.make;  // for conciseness in defining templates
+(function init(): void {
+    var $: any = go.GraphObject.make;  // for conciseness in defining templates
 
-    myDiagram = $(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
+    let myDiagram: any = $(go.Diagram, "myDiagramDiv",  // create a Diagram for the DIV HTML element
                   {
                     initialContentAlignment: go.Spot.Center,  // center the content
                     "undoManager.isEnabled": true  // enable undo & redo
@@ -11,11 +11,11 @@
     myDiagram.nodeTemplate =
       $(go.Node, "Auto",  // the Shape will go around the TextBlock
         $(go.Shape, "RoundedRectangle", { strokeWidth: 0},
-          // Shape.fill is bound to Node.data.color
+          // shape.fill is bound to Node.data.color
           new go.Binding("fill", "color")),
         $(go.TextBlock,
           { margin: 8 },  // some room around the text
-          // TextBlock.text is bound to Node.data.key
+          // textBlock.text is bound to Node.data.key
           new go.Binding("text", "key"))
       );
 

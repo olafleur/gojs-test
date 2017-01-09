@@ -1,0 +1,15 @@
+{
+  "name": "gojs-test",
+  "version": "0.1.0",
+  "description": "Tests with GoJS",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/go": "^1.6.19",
+    "gojs": "^1.6.21"
+  }
+}
